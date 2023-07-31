@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
+import java.security.SecureRandom;
+import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +19,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "7252fb01ed67e601c9bf65804b1552d74b77b04dadb1903ba30fb312fd243f69";
+    private static final String SECRET_KEY = "ab4f84f8b42a16ca9e1d8eeffb1a3d8104668a02077ed05d77b23b8490b6fc1d";
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
